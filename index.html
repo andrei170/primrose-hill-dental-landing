@@ -121,6 +121,16 @@
   .cinfo li b{color:var(--teal);display:inline-block;width:90px;font-weight:600}
   .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
+  .grid3 .reveal.in,.team .reveal.in,.ba .reveal.in,.qgrid .reveal.in{transition-delay:var(--d,0s)}
+  /* visit steps */
+  .visit{background:#fff}
+  .vsteps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:38px;counter-reset:vs}
+  .vstep{position:relative;background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:30px 24px 26px}
+  .vstep:before{counter-increment:vs;content:counter(vs,decimal-leading-zero);font-family:var(--serif);font-size:30px;color:var(--gold2);font-weight:700;display:block;margin-bottom:10px}
+  .vstep h3{color:var(--teal);margin-bottom:6px}
+  .vstep p{color:var(--muted);font-size:14.5px}
+  @media(max-width:860px){.vsteps{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.vsteps{grid-template-columns:1fr}}
   footer{background:var(--teal);color:#a9c6c2;font-size:13.5px;padding:40px 0;text-align:center}
   footer .logo{color:#fff;justify-content:center;margin-bottom:10px}
   .demo-tag{position:fixed;bottom:14px;right:14px;background:rgba(20,82,78,.92);color:#dcebe8;font-size:11.5px;padding:8px 13px;border-radius:8px;z-index:60;letter-spacing:.3px}
@@ -168,12 +178,12 @@
   <h2 class="reveal">Treatments that change how you feel about your smile.</h2>
   <p class="lead reveal">From a single implant to a complete makeover, planned carefully and finished beautifully.</p>
   <div class="grid3">
-    <div class="card reveal"><div class="ic">🦷</div><h3>Dental implants</h3><p>Replace missing teeth with permanent, natural-looking implants. Planned by a principal with postgraduate implant training.</p></div>
-    <div class="card reveal"><div class="ic">✨</div><h3>Porcelain veneers</h3><p>Hand-finished veneers and composite bonding to reshape, brighten and correct, designed to suit your face.</p></div>
-    <div class="card reveal"><div class="ic">😁</div><h3>Invisalign</h3><p>Straighten your teeth discreetly with clear aligners, mapped out so you can see the result before you start.</p></div>
-    <div class="card reveal"><div class="ic">💎</div><h3>Smile makeovers</h3><p>A full plan combining whitening, alignment and restoration to give you a smile that finally feels like yours.</p></div>
-    <div class="card reveal"><div class="ic">🛡️</div><h3>Emergency care</h3><p>In pain? We keep room for emergencies and look after our patients quickly and kindly.</p></div>
-    <div class="card reveal"><div class="ic">👨‍👩‍👧</div><h3>Family dentistry</h3><p>Calm, gentle check-ups and hygiene for the whole family, the way it has been done here for generations.</p></div>
+    <div class="card reveal" style="--d:0s"><div class="ic">🦷</div><h3>Dental implants</h3><p>Replace missing teeth with permanent, natural-looking implants. Planned by a principal with postgraduate implant training.</p></div>
+    <div class="card reveal" style="--d:.08s"><div class="ic">✨</div><h3>Porcelain veneers</h3><p>Hand-finished veneers and composite bonding to reshape, brighten and correct, designed to suit your face.</p></div>
+    <div class="card reveal" style="--d:.16s"><div class="ic">😁</div><h3>Invisalign</h3><p>Straighten your teeth discreetly with clear aligners, mapped out so you can see the result before you start.</p></div>
+    <div class="card reveal" style="--d:0s"><div class="ic">💎</div><h3>Smile makeovers</h3><p>A full plan combining whitening, alignment and restoration to give you a smile that finally feels like yours.</p></div>
+    <div class="card reveal" style="--d:.08s"><div class="ic">🛡️</div><h3>Emergency care</h3><p>In pain? We keep room for emergencies and look after our patients quickly and kindly.</p></div>
+    <div class="card reveal" style="--d:.16s"><div class="ic">👨‍👩‍👧</div><h3>Family dentistry</h3><p>Calm, gentle check-ups and hygiene for the whole family, the way it has been done here for generations.</p></div>
   </div>
 </div></section>
 
@@ -192,15 +202,27 @@
   </div>
 </div></section>
 
+<section class="visit"><div class="wrap">
+  <div class="eyebrow reveal">What to expect</div>
+  <h2 class="reveal">Your visit, step by step.</h2>
+  <p class="lead reveal">Coming to a new dentist can feel daunting. Here is exactly how it goes, so there are no surprises.</p>
+  <div class="vsteps">
+    <div class="vstep reveal" style="--d:0s"><h3>A warm welcome</h3><p>You are greeted by name in a calm, familiar practice that has been on Regents Park Road since 1945.</p></div>
+    <div class="vstep reveal" style="--d:.08s"><h3>An honest look</h3><p>Dr Kyaw listens to what you would like to change and gently examines your teeth, with no rush and no pressure.</p></div>
+    <div class="vstep reveal" style="--d:.16s"><h3>A clear plan</h3><p>You leave understanding your options in plain English, from a single implant to a full smile makeover.</p></div>
+    <div class="vstep reveal" style="--d:.24s"><h3>Care that lasts</h3><p>When you are ready, treatment is planned carefully and finished beautifully, the way generations here have come to expect.</p></div>
+  </div>
+</div></section>
+
 <section><div class="wrap">
   <div class="eyebrow reveal">Behind your care</div>
   <h2 class="reveal">A small, friendly team that remembers you.</h2>
   <p class="lead reveal">The same familiar faces, looking after Primrose Hill families year after year.</p>
   <div class="team">
-    <div class="tm reveal"><div class="ph"><img src="proof/team2.jpg" alt="Primrose Hill Dental team member"></div><div class="cap">Hygiene & patient care</div></div>
-    <div class="tm reveal"><div class="ph"><img src="proof/team3.jpg" alt="Primrose Hill Dental team member"></div><div class="cap">Clinical team</div></div>
-    <div class="tm reveal"><div class="ph"><img src="proof/team4.jpg" alt="Primrose Hill Dental team member"></div><div class="cap">Clinical team</div></div>
-    <div class="tm reveal"><div class="ph"><img src="proof/team5.jpg" alt="Primrose Hill Dental practice manager"></div><div class="cap">Front desk & practice care</div></div>
+    <div class="tm reveal" style="--d:0s"><div class="ph"><img src="proof/team2.jpg" alt="Primrose Hill Dental team member"></div><div class="cap">Hygiene & patient care</div></div>
+    <div class="tm reveal" style="--d:.1s"><div class="ph"><img src="proof/team3.jpg" alt="Primrose Hill Dental team member"></div><div class="cap">Clinical team</div></div>
+    <div class="tm reveal" style="--d:.2s"><div class="ph"><img src="proof/team4.jpg" alt="Primrose Hill Dental team member"></div><div class="cap">Clinical team</div></div>
+    <div class="tm reveal" style="--d:.3s"><div class="ph"><img src="proof/team5.jpg" alt="Primrose Hill Dental practice manager"></div><div class="cap">Front desk & practice care</div></div>
   </div>
 </div></section>
 
@@ -220,10 +242,10 @@
   <div class="eyebrow reveal">In our patients' words</div>
   <h2 class="reveal">Loved by the people who matter most.</h2>
   <div class="qgrid">
-    <div class="quote reveal"><div class="stars">★★★★★</div><p>"Top quality dentistry, while surrounded by kindness and care."</p><div class="by">- Linda Mills</div></div>
-    <div class="quote reveal"><div class="stars">★★★★★</div><p>"Never disappointed. Dr Kyaw is the best dentist."</p><div class="by">- Anna M</div></div>
-    <div class="quote reveal"><div class="stars">★★★★★</div><p>"A friendly, polite and professional dentist."</p><div class="by">- Jimmy Alexander</div></div>
-    <div class="quote reveal"><div class="stars">★★★★★</div><p>"Primrose Hill Dental makes me feel taken care of."</p><div class="by">- Flavio</div></div>
+    <div class="quote reveal" style="--d:0s"><div class="stars">★★★★★</div><p>"Top quality dentistry, while surrounded by kindness and care."</p><div class="by">- Linda Mills</div></div>
+    <div class="quote reveal" style="--d:.1s"><div class="stars">★★★★★</div><p>"Never disappointed. Dr Kyaw is the best dentist."</p><div class="by">- Anna M</div></div>
+    <div class="quote reveal" style="--d:0s"><div class="stars">★★★★★</div><p>"A friendly, polite and professional dentist."</p><div class="by">- Jimmy Alexander</div></div>
+    <div class="quote reveal" style="--d:.1s"><div class="stars">★★★★★</div><p>"Primrose Hill Dental makes me feel taken care of."</p><div class="by">- Flavio</div></div>
   </div>
 </div></section>
 
