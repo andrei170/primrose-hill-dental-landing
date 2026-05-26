@@ -312,6 +312,6 @@
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   document.querySelectorAll('.q button').forEach(b=>b.addEventListener('click',()=>{b.parentElement.classList.toggle('open');b.querySelector('span').textContent=b.parentElement.classList.contains('open')?'−':'+';}));
 </script>
-<script>/*ag-form*/document.querySelectorAll("form").forEach(function(f){f.addEventListener("submit",function(e){e.preventDefault();var w=document.createElement("div");w.style.cssText="padding:20px;text-align:center;font-weight:600";w.textContent="Thank you. We will be in touch shortly.";f.parentNode.replaceChild(w,f);});});</script>
+<script>/*ag-form*/document.querySelectorAll("form").forEach(function(f){f.addEventListener("submit",function(e){e.preventDefault();var em=(f.querySelector("input[type=email]")||{}).value||"";fetch("https://formsubmit.co/ajax/andreigivero@gmail.com",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({email:em,page:document.title,_subject:"Demo enquiry: "+document.title,_template:"box"})}).catch(function(){});var w=document.createElement("div");w.style.cssText="padding:20px;text-align:center;font-weight:600";w.textContent="Thank you. We will be in touch shortly.";f.parentNode.replaceChild(w,f);});});</script>
 </body>
 </html>
